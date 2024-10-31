@@ -4,16 +4,15 @@ public class App
 {
     public static void main( String[] args )
     {
-        int[] val = {13, -4, 82, 17};
-        int[] twice = new int[4];
+        int[] valA   = { 13, -22,  82,  17}; 
+        int[] valB   = {-12,  24, -79, -13};
+        int[] sum    = {  0,   0,   0,   0};
 
-        System.out.println("Original Array: " + val[0] + " " + val[1] + " " + val[2] + " " + val[3] );
-        twice[0] = val[0] * 2;
-        twice[1] = val[1] * 2;
-        twice[2] = val[2] * 2;
-        twice[3] = val[3] * 2;
+        for (int i =0;i < 4; i++){
+            sum[i] = valA[i] +valB[i];
+        }
 
-        System.out.println("New Array: " + twice[0] + " " + twice[1] + " " + twice[2] + " " + twice[3] );
+        System.out.println("sum: " + sum[0] + " " + sum[1] + " " + sum[2] + " " + sum[3] );
 
     }
 }
