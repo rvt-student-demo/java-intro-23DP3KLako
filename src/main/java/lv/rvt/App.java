@@ -1,25 +1,34 @@
 package lv.rvt;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class App 
 {
-    public static void main( String[] args )
-    {
-        int[] val = {0, 1, 2, 3};
-        int temp;
+    public static void main( String[] args ){
+        String[] words = {"sebastian", "lucas", "hanna", "garbiel"};
+        String[] years = {"2017", "2017", "2017", "2014", "2009"};
 
-        System.out.println("Original Array: " + val[0] + " " + val[1] + " " + val[2] + " " + val[3] );
-
-       
-        for(int i = 0; i < val.length / 2; i++){
-            temp = val[i];
-            val[i] = val[val.length - 1 - i];
-            val[val.length - 1 - i] = temp;
+        int sum = 0;
+        for (String year : years) {
+            sum += Integer.parseInt(year);
         }
+        int averageYear = (int) sum / years.length;
 
-      
+        String longestWord = "";
+        int maxLength = 0;
 
-       
-        System.out.println("Reversed Array: " + val[0] + " " + val[1] + " " + val[2] + " " + val[3] );
+        for (String word : words) {
+            if (word.length() > maxLength) {
+                longestWord = word;
+                maxLength = word.length();
+
+            }
+        }
+        System.out.println("The longest name: " + longestWord);
+        System.out.println("Average of the birth years: " + averageYear);
+    }
+
 
     }
 }
