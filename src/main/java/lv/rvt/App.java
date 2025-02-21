@@ -7,6 +7,6 @@ public class App {
         juice.takeFromWarehouse(11.3);
         System.out.println(juice.getName());
         juice.addToWarehouse(1.0);
-        System.out.println(juice);     
+        System.out.println(juice);
     }
 }
